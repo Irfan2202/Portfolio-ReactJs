@@ -1,0 +1,32 @@
+[
+  {
+    "id": "html",
+    "name": "HTML",
+    "icon": "/icons/html.svg"
+  },
+  {
+    "id": "css",
+    "name": "CSS",
+    "icon": "/icons/css.svg"
+  },
+  {
+    "id": "js",
+    "name": "JavaScript",
+    "icon": "/icons/js.svg"
+  },
+  {
+    "id": "php",
+    "name": "PHP",
+    "icon": "/icons/php.svg"
+  },
+  {
+    "id": "laravel",
+    "name": "Laravel",
+    "icon": "/icons/laravel.svg"
+  },
+  {
+    "id": "reactjs",
+    "name": "ReactJS",
+    "icon": "/icons/react.svg"
+  }
+]

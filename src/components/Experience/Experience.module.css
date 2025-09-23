@@ -1,0 +1,59 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+  background-color: var(--color-bg, #f8f9fa);
+}
+
+.skillCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skillCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.5rem;
+  object-fit: contain;
+}
+
+.name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+}
+
+/* Responsif untuk HP kecil */
+@media (max-width: 480px) {
+  .container {
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+
+  .skillCard {
+    padding: 0.75rem;
+  }
+
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .name {
+    font-size: 0.8rem;
+  }
+}

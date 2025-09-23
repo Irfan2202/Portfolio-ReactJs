@@ -1,33 +1,48 @@
 @import "../../index.css";
 
-nav {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+  background-color: var(--color-bg); /* Tambah latar belakang */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
+
 .brand {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
   color: var(--color-text);
   text-decoration: none;
 }
+
 .menu {
   display: flex;
+  align-items: center;
 }
 
 .navItems {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
+  margin: 0; /* Hapus margin default */
+  padding: 0; /* Hapus padding default */
 }
 
 .navItems li a {
   color: var(--color-text);
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.1rem;
   transition: color 0.3s ease;
 }
+
+.navItems li a:hover {
+  color: var(--color-primary);
+}
+
 .menuButton {
   display: none;
   font-size: 1.5rem;
@@ -36,33 +51,33 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
-  .nav {
+  .navbar {
     flex-direction: column;
     align-items: flex-start;
   }
+
   .menu {
     position: absolute;
-    top: 20px;
-    right: 0;
-    margin-right: 10%;
+    top: 1rem;
+    right: 1rem;
     flex-direction: column;
     align-items: flex-end;
     gap: 1rem;
-    z-index: 1;
-    background-color: var(--color-bg);
   }
+
   .menuButton {
     display: block;
-    cursor: pointer;
   }
+
   .navItems {
     display: none;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     gap: 1rem;
-    border-radius: 10px;
     background-color: var(--color-bg);
-    padding: 1rem 2rem;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
 
   .navItems.show {
